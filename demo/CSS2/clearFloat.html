@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clear float</title>
+  <style>
+    .content {
+      width: calc(100% - 40px);
+      max-width: 360px;
+      margin: 50px auto;
+    }
+    .box {
+      padding: 10px;
+      background-color: brown;
+    }
+    .box > img {
+      float: right;
+    }
+    /* 伪类选择器，一般前面有一个冒号 */
+    .clear:after {
+      content: '';
+      clear: both;
+      display: list-item;
+      /* display: block; */
+      /* display: table; */
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <div class="box clear">
+      <img src="../img/psg.lgd.jpg" alt="" width="200px">
+    </div>
+  </div>
+  
+  
+</body>
+</html>
